@@ -1,0 +1,29 @@
+version: '3'
+services:
+  c10:
+    image: capes/c10
+    ports:
+      - 8003:80
+    volumes:
+      - moodledata:/var/moodledata
+      - dbdata:/var/lib/postgresql/10/main
+      - logs:/var/log
+    environment:
+      - DBPASS=passwd
+
+volumes:
+  moodledata:
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/moodlec10/moodledata
+  dbdata:
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/moodlec10/dbdata
+  logs:
+    driver_opts:
+      o: bind
+      type: none
+      device: /data/moodlec10/logs
