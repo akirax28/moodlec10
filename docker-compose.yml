@@ -12,7 +12,7 @@ services:
       - DBPASS=passwd
     configs:
       - source: config_php
-        target: /vat/www/html/c10/config.php
+        target: /var/www/html/c10/config.php
 
 configs:
   config_php:
