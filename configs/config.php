@@ -14,12 +14,7 @@ $CFG->dboptions = array (
   'dbport' => 5432,
   'dbsocket' => '',
 );
-$is_web=http_response_code()!==FALSE;
-if ($is_web) {
-        $CFG->wwwroot   = 'https://'.$_SERVER["HTTP_HOST"].'/c10';
-} else {
         $CFG->wwwroot   = 'https://ava.ifrr.edu.br/c10';
-}
 $CFG->dataroot  = '/var/moodledatac10';
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
