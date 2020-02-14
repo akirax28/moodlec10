@@ -10,6 +10,13 @@ services:
       - logs:/var/log
     environment:
       - DBPASS=passwd
+    configs:
+      - source: config_php
+        target: /vat/www/html/c10/config.php
+
+configs:
+  config_php:
+    file: ./configs/config.php
 
 volumes:
   moodledata:
