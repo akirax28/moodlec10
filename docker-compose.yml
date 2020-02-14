@@ -1,4 +1,4 @@
-version: '3'
+version: '3.7'
 services:
   c10:
     image: capes/c10
