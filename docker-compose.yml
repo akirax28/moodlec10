@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   c10:
-    image: capes/c10
+    image: akirax/moodle-c10
     ports:
       - 8003:80
     volumes:
