@@ -13,6 +13,9 @@ services:
     configs:
       - source: config_php
         target: /var/www/html/c10/config.php
+        uid: '33'
+        gid: '33'
+        mode: 0666
 
 configs:
   config_php:
