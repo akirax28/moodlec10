@@ -14,7 +14,7 @@ $CFG->dboptions = array (
   'dbport' => 5432,
   'dbsocket' => '',
 );
-$CFG->wwwroot   = 'http://'.$_SERVER['SERVER_NAME'].'/c10';
+$CFG->wwwroot   = 'https://'.$_SERVER['SERVER_NAME'].'/c10';
 $CFG->dataroot  = '/var/moodledatac10';
 $CFG->admin     = 'admin';
 $CFG->directorypermissions = 0777;
