@@ -19,4 +19,5 @@ Neste repositório temos a imagem do curso Ciência é 10, pronto para uso. Abai
 ```
 
 ## Acesso
-- porta 8003 
+- porta http 8003 
+- porta https 8004
