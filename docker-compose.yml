@@ -4,6 +4,7 @@ services:
     image: akirax/moodle-c10
     ports:
       - 8003:80
+      - 8004:433
     volumes:
       - moodledata:/var/moodledata
       - dbdata:/var/lib/postgresql/10/main
@@ -13,13 +14,14 @@ services:
     configs:
       - source: config_php
         target: /var/www/html/c10/config.php
-        uid: '33'
-        gid: '33'
-        mode: 0666
+      - source: config_apache2
+        target: /etc/apache2/sites-enable/c10-ssl.conf
 
 configs:
   config_php:
     file: ./configs/config.php
+  config_apache2:
+    file: ./configs/c10-ssl.conf
 
 volumes:
   moodledata:
